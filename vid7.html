@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+    }
+
+    // Check if dark mode is saved in localStorage and apply it
+    window.addEventListener('DOMContentLoaded', () => {
+        const darkModeEnabled = localStorage.getItem('darkModeEnabled');
+        if (darkModeEnabled === 'true') {
+            toggleDarkMode();
+        }
+    });
+
+    // Event listener for the dark mode toggle button
+    document.addEventListener('DOMContentLoaded', () => {
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                toggleDarkMode();
+                // Save the dark mode state in localStorage
+                const darkModeEnabled = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkModeEnabled', darkModeEnabled);
+            });
+        }
+    });
+
+    const video = document.getElementById('hoverVideo');
+
+    // Play the video on hover
+    video.addEventListener('mouseenter', () => {
+        video.play();
+        video.style.transform = 'scale(1.1)';
+    });
+
+    // Pause the video and reset the scale on hover out
+    video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0; // Reset to the beginning
+        video.style.transform = 'scale(1)';
+    });
+</script>
+
+<style>
+
+    /* Add styling for the video */
+    video {
+        height: auto;
+        transition: transform 0.3s ease; /* Add smooth transition effect */
+    }
+
+    /* Hide the default video controls */
+    video::-webkit-media-controls {
+    }
+
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesvid.css">
+    <title>YouTube</title>
+    <link rel="shortcut icon" href="images/youtube-logo-png-2061.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode-stylesheet">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <i class="ri-menu-line"></i>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/youtube-logo-png-2061.png" alt="">
+                </div>
+                <h1 id="logo-txt">YouTube</h1>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="">
+   
+                <input type="text" placeholder="Search">
+            </form>
+               <button class="search"><i class="ri-search-line"></i></button>
+
+            <button class="mic"><i class="ri-mic-fill"></i></button>
+
+        </div>
+        <div class="profile-container">
+             <div class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class="ri-moon-fill"></i>
+                </div>  
+            <i class="ri-video-add-line"></i>
+            <i class="ri-grid-fill"></i>
+            <i class="ri-notification-4-line"></i>
+            <div class="profile-box">
+                <img src="images/aclc.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="sidebar">
+            <div class="sidebar-+items">
+                <a href="index.html"class="sidebar-item"><i class="ri-home-4-line"></i></i>Home</a>
+                <a class="sidebar-item"><i class="ri-compass-3-line"></i>Explore</a>
+                <a class="sidebar-item"><i class="ri-wireless-charging-line"></i>Shorts</a>
+                <a class="sidebar-item"><i class="ri-rss-line"></i>Subscription</a>
+                <hr>
+                <a class="sidebar-item"><i class="ri-links-line"></i>Library</a>
+                <a class="sidebar-item"><i class="ri-history-line"></i>History</a>
+                <a class="sidebar-item"><i class="ri-video-line"></i>Your videos</a>
+                <a class="sidebar-item"><i class="ri-time-line"></i>Watch later</a>
+                <a class="sidebar-item"><i class="ri-play-list-2-line"></i>All videos</a>
+                <a class="sidebar-item"><i class="ri-arrow-down-s-line"></i>Show more</a>
+                <hr>
+                <h4 class="more">More from youtube</h4>
+                <a class="sidebar-item"><i class="ri-keyboard-box-line"></i>Gaming</a>
+                <a class="sidebar-item"><i class="ri-live-line"></i>Live</a>
+                <a class="sidebar-item"><i class="ri-award-line"></i>Sports</a>
+                <hr>
+                <a class="sidebar-item"><i class="ri-settings-5-line"></i>Settings</a>
+                <a class="sidebar-item"><i class="ri-flag-line"></i>Report history</a>
+                <a class="sidebar-item"><i class="ri-question-line"></i>Help</a>
+                <a class="sidebar-item"><i class="ri-feedback-line"></i>Send feedback</a>
+
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="chips-wrapper">
+                <div class="chip">
+                    <p><a class="canats" href="canats.html">Easter Egg</a></p>
+                </div>
+                <div class="chip">
+                    <p>Shean</p>
+                </div>
+                <div class="chip">
+                    <p>Daniel</p>
+                </div>
+                <div class="chip">
+                    <p>Marco</p>
+                </div>
+                <div class="chip">
+                    <p>Von</p>
+                </div>
+                <div class="chip">
+                    <p>Audreic</p>
+                </div>
+                <div class="chip">
+                    <p>Niko</p>
+                </div>
+                <div class="chip">
+                    <p>Tecson</p>
+                </div>
+                <div class="chip">
+                    <p>Sir</p>
+                </div>
+                <div class="chip">
+                    <p>Ma pass</p>
+                </div>
+                <div class="chip">
+                    <p>Na</p>
+                </div>
+                <div class="chip">
+                    <p>Kami</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/nvu-YPSk_XE?si=Od_8FOiKxBWWwjE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid7.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">LISTEN LOOK AND LISTEN AND LEARN (MEME)</h3>
+                                <div class="channel-name">Raffy Tulfo</div>
+                                <div class="views-upload">
+                                    <div class="views">49K views .</div>
+                                    <div class="upload">2 months ago</div>
+                                </div>
+                            </div>
+                        </div>
+        
+            
+                    </div>
+                </div>
+                
+                   
+                 
+          
+                    </div>
+               
+                </div>
+               
+            </div>
+
+        </div>
+        
+    </div>
+
+    
+</body>
+
+</html>

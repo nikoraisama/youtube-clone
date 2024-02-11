@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+    }
+
+    // Check if dark mode is saved in localStorage and apply it
+    window.addEventListener('DOMContentLoaded', () => {
+        const darkModeEnabled = localStorage.getItem('darkModeEnabled');
+        if (darkModeEnabled === 'true') {
+            toggleDarkMode();
+        }
+    });
+
+    // Event listener for the dark mode toggle button
+    document.addEventListener('DOMContentLoaded', () => {
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                toggleDarkMode();
+                // Save the dark mode state in localStorage
+                const darkModeEnabled = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkModeEnabled', darkModeEnabled);
+            });
+        }
+    });
+
+</script>
+
+<style>
+    /* Add styling for the video */
+    video {
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hide the default video controls */
+    video::-webkit-media-controls {
+        display: none;
+    }
+
+   
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>YouTube</title>
+    <link rel="shortcut icon" href="images/youtube-logo-png-2061.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode-stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <i class="ri-menu-line"></i>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/youtube-logo-png-2061.png" alt="">
+                </div>
+                <h1 id="logo-txt">YouTube</h1>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="">
+                <input type="text" placeholder="Search">
+            </form>
+            <button class="search"><i class="ri-search-line"></i></button>
+            <button class="mic"><i class="ri-mic-fill"></i></button>
+        </div>
+        <div class="profile-container">
+            <div class="dark-mode-toggle" id="dark-mode-toggle">
+                 <i class="ri-moon-fill"></i>
+            </div>
+            <i class="ri-video-add-line"></i>
+            <i class="ri-grid-fill"></i>
+            <i class="ri-notification-4-line"></i>
+            <div class="profile-box">
+                <img src="images/aclc.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="sidebar">
+            <div class="sidebar-items">
+                <a class="sidebar-item"><i class="ri-home-5-line"></i></i>Home</a>
+                <a class="sidebar-item"><i class="ri-compass-3-line"></i>Explore</a>
+                <a class="sidebar-item"><i class="ri-wireless-charging-line"></i>Shorts</a>
+                <a class="sidebar-item"><i class="ri-rss-line"></i>Subscription</a>
+                <hr>
+                <a class="sidebar-item"><i class="ri-links-line"></i>Library</a>
+                <a class="sidebar-item"><i class="ri-history-line"></i>History</a>
+                <a class="sidebar-item"><i class="ri-video-line"></i>Your videos</a>
+                <a class="sidebar-item"><i class="ri-time-line"></i>Watch later</a>
+                <a class="sidebar-item"><i class="ri-play-list-2-line"></i>All videos</a>
+                <a class="sidebar-item"><i class="ri-arrow-down-s-line"></i>Show more</a>
+                <hr>
+                <h4 class="more">More from youtube</h4>
+                <a class="sidebar-item"><i class="ri-keyboard-box-line"></i>Gaming</a>
+                <a class="sidebar-item"><i class="ri-live-line"></i>Live</a>
+                <a class="sidebar-item"><i class="ri-award-line"></i>Sports</a>
+                <hr>
+                <a class="sidebar-item"><i class="ri-settings-5-line"></i>Settings</a>
+                <a class="sidebar-item"><i class="ri-flag-line"></i>Report history</a>
+                <a class="sidebar-item"><i class="ri-question-line"></i>Help</a>
+                <a class="sidebar-item"><i class="ri-feedback-line"></i>Send feedback</a>
+
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="chips-wrapper">
+                <div class="chip">
+                    <p><a class="canats" href="canats.html">Easter Egg</a></p>
+                </div>
+                <div class="chip">
+                    <p>HCI</p>
+                </div>
+                <div class="chip">
+                    <p>Introduction</p>
+                </div>
+                <div class="chip">
+                    <p>To</p>
+                </div>
+                <div class="chip">
+                    <p>Human</p>
+                </div>
+                <div class="chip">
+                    <p>Computer</p>
+                </div>
+                <div class="chip">
+                    <p>Interaction</p>
+                </div>
+                <div class="chip">
+                    <p>Ma pass</p>
+                </div>
+                <div class="chip">
+                    <p>Na</p>
+                </div>
+                <div class="chip">
+                    <p>Kami</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid1.html" class="video-box">
+                            <img src="images/1.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid1.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">Hindi po masama ang aking ginawa.</h3>
+                                <div class="channel-name">OTLUM DELA CRUZ</div>
+                                <div class="views-upload">
+                                    <div class="views">49K views .</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                    <div class="upload">2 months ago</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid2.html" class="video-box">
+                            <img src="images/2.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid2.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">Paano mo nasabi?</h3>
+                                <div class="channel-name">ROBERT NOCOS</div>
+                                <div class="views-upload">
+                                    <div class="views">525 views .</div>
+                                    <div class="upload">1 day ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid3.html" class="video-box">
+                            <img src="images/3.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid3.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">Gabi ng lagim</h3>
+                                <div class="channel-name"> Ed Caluag</div>
+                                <div class="views-upload">
+                                    <div class="views">46K views .</div>
+                                    <div class="upload">2 months ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid4.html" class="video-box">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid4.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">Tit*</h3>
+                                <div class="channel-name">Buunja</div>
+                                <div class="views-upload">
+                                    <div class="views">238K views .</div>
+                                    <div class="upload">1 month ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid5.html" class="video-box">
+                            <img src="images/5.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid5.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">MASON AKO!</h3>
+                                <div class="channel-name"> Kuya </div>
+                                <div class="views-upload">
+                                    <div class="views">50K views .</div>
+                                    <div class="upload">3 months ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid6.html" class="video-box">
+                            <img src="images/6.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid6.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">TITIKMAN O TATAKPAN</h3>
+                                <div class="channel-name">Aywooow</div>
+                                <div class="views-upload">
+                                    <div class="views">28K views .</div>
+                                    <div class="upload">2 days ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid7.html" class="video-box">
+                            <img src="images/7.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid7.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">LISTEN LOOK AND LISTEN AND LEARN</h3>
+                                <div class="channel-name">Raffy Tulfo</div>
+                                <div class="views-upload">
+                                    <div class="views">65K views .</div>
+                                    <div class="upload">2 weeks ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid8.html" class="video-box">
+                            <img src="images/8.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid8.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">JUNEEEELLL</h3>
+                                <div class="channel-name">Kuya Junel</div>
+                                <div class="views-upload">
+                                    <div class="views">37K views .</div>
+                                    <div class="upload">6 days ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid9.html" class="video-box">
+                            <img src="images/9.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid9.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">Ang sarap mo Pia</h3>
+                                <div class="channel-name">Mike Enriquez</div>
+                                <div class="views-upload">
+                                    <div class="views">100K views .</div>
+                                    <div class="upload">1 year ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-cover">
+                    <div class="video-content">
+                        <a href="vid10.html" class="video-box">
+                            <img src="images/10.png" alt="">
+                        </a>
+                        <div class="video-details">
+                            <div class="channel-logo">
+                                <img src="images/vid10.jpeg" alt="">
+                            </div>
+                            <div class="detail">
+                                <h3 class="title">Wala na finish na</h3>
+                                <div class="channel-name">Kuya</div>
+                                <div class="views-upload">
+                                    <div class="views">281K views .</div>
+                                    <div class="upload">1 year ago</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hidden-content">
+                            <div class="btn"><i class="ri-time-line"></i>Watch later</div>
+                            <div class="btn"><i class="ri-play-list-2-line"></i>Add to queue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

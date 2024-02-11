@@ -1,0 +1,128 @@
+/* Add dark mode styles here */
+
+/* Example dark mode styles */
+.dark-mode .header {
+    background-color: #181818;
+    color: #fff;
+}
+
+.dark-mode .body-container {
+    background-color: #181818;
+    color: #fff;
+}
+
+.dark-mode #logo-txt {
+    color: white;
+}
+
+.dark-mode  i {
+    color: white;
+}
+
+.dark-mode .search-container input {
+    align-items: center;
+    background-color: #212121;
+    color: #272727;
+}
+
+.dark-mode .search-container .search {
+    background-color: #3d3d3d;
+    border: 1px solid #a3a3a3;
+}
+
+.dark-mode .search-container .mic {
+    background-color: #3d3d3d;
+}
+
+.dark-mode .sidebar {
+    background-color: #181818;
+}
+
+.dark-mode .sidebar-item:hover {
+    background-color: #3d3d3d;
+    border-radius: 12px;
+}
+
+.dark-mode .sidebar-item {
+
+    color: white;
+}
+
+.dark-mode h4 {
+    color: white;
+}
+
+.dark-mode hr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.dark-mode .chips-wrapper {
+    background-color: #181818;
+}
+
+.dark-mode .video-container {
+    background-color: #181818;
+}
+
+.dark-mode .title {
+    color: white;
+    transition: .5s;
+}
+
+.dark-mode .video-content:hover .title {
+    transition: .5s;
+    color: white;
+}
+
+.dark-mode .video-content:hover .video-details {
+    background-color: #3d3d3d;
+    transition: .5s;
+}
+
+.dark-mode .video-content:hover {
+    transition: .5s;
+    background-color: #3d3d3d;
+}
+
+.dark-mode .chip {
+    transition: .5s;
+    background-color: #3d3d3d;
+    color: white;
+    font-weight: bold;
+}
+
+.dark-mode .chip:hover {
+    background-color: #aaaaaa;
+    transition: .5s;
+}
+
+.dark-mode .highlight_chip {
+    margin: 12px 6px;
+    background-color: #e5e5e5;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: black;
+    transition: .5s;
+}
+
+.dark-mode .btn i {
+    font-size: .7rem;
+    margin-right: 5px;
+    color: black;
+}
+
+.dark-mode .shean {
+    color: black;
+}
+
+.dark-mode .canats {
+    color: white;
+}
+
+
+
+/* Add more dark mode styles as needed */
